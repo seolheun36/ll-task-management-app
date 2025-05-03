@@ -27,6 +27,10 @@ public class App {
                     todosLastID++;
 
                     System.out.printf("%d번 할 일일 생성되었습니다.\n", id);
+                } else if (cmd.equals("list")) {
+                    System.out.println("번호 / 내용");
+
+                    todos.forEach(todo -> System.out.printf("%d / %s\n", todo.getId(), todo.getContent()));
                 }
             }
         }
